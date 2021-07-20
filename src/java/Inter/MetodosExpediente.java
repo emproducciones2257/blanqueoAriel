@@ -6,6 +6,7 @@
 package Inter;
 
 import Model.Expediente;
+import java.util.ArrayList;
 
 /**
  *
@@ -14,5 +15,6 @@ import Model.Expediente;
 public interface MetodosExpediente {
     
     void cargarExpediente(Expediente exp);
+    ArrayList<Expediente> listarTodo();
     
 }

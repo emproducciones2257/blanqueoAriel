@@ -6,13 +6,13 @@ import java.util.Date;
 public class Expediente {
     
     private long idExp;
-    private int nroExp;
+    private String nroExp;
     private String cara;
     private String fuero;
-    private int nroJuzgado;
-    private Date feUlUpdate;
+    private String nroJuzgado;
+    private String feUlUpdate;
 
-    public Expediente(long idExp, int nroExp, String cara, String fuero, int nroJuzgado, Date feUlUpdate) {
+    public Expediente(long idExp, String nroExp, String cara, String fuero, String nroJuzgado, String feUlUpdate) {
         this.idExp = idExp;
         this.nroExp = nroExp;
         this.cara = cara;
@@ -21,7 +21,7 @@ public class Expediente {
         this.feUlUpdate = feUlUpdate;
     }
 
-    public Expediente(int nroExp, String cara, String fuero, int nroJuzgado, Date feUlUpdate) {
+    public Expediente(String nroExp, String cara, String fuero, String nroJuzgado, String feUlUpdate) {
         this.nroExp = nroExp;
         this.cara = cara;
         this.fuero = fuero;
@@ -40,11 +40,11 @@ public class Expediente {
         this.idExp = idExp;
     }
 
-    public int getNroExp() {
+    public String getNroExp() {
         return nroExp;
     }
 
-    public void setNroExp(int nroExp) {
+    public void setNroExp(String nroExp) {
         this.nroExp = nroExp;
     }
 
@@ -64,19 +64,19 @@ public class Expediente {
         this.fuero = fuero;
     }
 
-    public int getNroJuzgado() {
+    public String getNroJuzgado() {
         return nroJuzgado;
     }
 
-    public void setNroJuzgado(int nroJuzgado) {
+    public void setNroJuzgado(String nroJuzgado) {
         this.nroJuzgado = nroJuzgado;
     }
 
-    public Date getFeUlUpdate() {
+    public String getFeUlUpdate() {
         return feUlUpdate;
     }
 
-    public void setFeUlUpdate(Date feUlUpdate) {
+    public void setFeUlUpdate(String feUlUpdate) {
         this.feUlUpdate = feUlUpdate;
     }
 

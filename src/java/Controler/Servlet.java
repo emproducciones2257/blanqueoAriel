@@ -4,21 +4,17 @@ import MDAO.DAOExp;
 import Model.Expediente;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Date;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/**
- *
- * @author EMProducciones
- */
 
 public class Servlet extends HttpServlet {
 
     String viewForm ="view/formulario.jsp";
+    String viewIndex = "index.jsp";
     DAOExp exDao = new DAOExp();
     
     
@@ -42,6 +38,7 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        
         String accion = request.getParameter("ac");
         String dir="";
         DAOExp exDao = new DAOExp();
@@ -50,23 +47,24 @@ public class Servlet extends HttpServlet {
             
         }else if(accion.equalsIgnoreCase("Guardar")){
             Expediente ex = new Expediente();
-            ex.setNroExp(Integer.valueOf(request.getParameter("nroExpe")));
+            ex.setNroExp(request.getParameter("nroExpe"));
             ex.setCara(request.getParameter("cara"));
             ex.setFuero(request.getParameter("fuero"));
-            ex.setNroJuzgado(Integer.valueOf(request.getParameter("nroJuz")));
-            //ex.setFeUlUpdate(Date.valueOf(request.getParameter("fecha")));           
+            ex.setNroJuzgado(request.getParameter("nroJuz"));
+            ex.setFeUlUpdate(request.getParameter("fecha"));           
             exDao.cargarExpediente(ex);
 
             dir=viewForm;
+        }else if(accion.equalsIgnoreCase("list")){
+            dir=viewIndex;
         }
         RequestDispatcher vista=request.getRequestDispatcher(dir);
-        vista.forward(request, response);
+        vista.forward(request, response);       
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException {      
     }
 
     /**

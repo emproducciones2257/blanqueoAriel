@@ -18,12 +18,12 @@
             text-align: center;
             color: white;
             border-bottom: white 0.1vw dashed;
-            width: 26vw;
+            width: 27vw;
             margin-bottom: 2vw;
             margin-top: 1vw;
             padding: 0.5vw;
             font-family:monospace;
-           font-size: 2.5vw;
+           font-size: 2.3vw;
         }
 
         .datos {
@@ -43,25 +43,37 @@
         footer {
             text-align: center;
         }
+
+    
     </style>
 
-    <h1 id="ne">Nuevo Expediente</h1>
-        <p class="datos">Numero de Expediente:</p> <input type="text" class="formulario_" placeholder="Expediente número.."> <br>
-        <p class="datos">Carátula:</p> <input type="text" class="formulario_" placeholder="carátula.."> <br>
-        <p class="datos">Fuero:</p> <select name="fuero" class="formulario_"> <br>
+    <h1 id="ne">Modificar Expediente</h1>
+
+    <form action="">
+        <label class="datos">Numero de Expediente:</label> <br> <input type="number" id="hola" class="formulario_" placeholder="Expediente número.." required> <br> 
+        <label class="datos">Carátula:</label> <br> <input type="text" class="formulario_" placeholder="carátula.." required> <br>
+        <label class="datos">Fuero:</label> <br> <select name="fuero" class="formulario_" required> <br>
             <option class="formulario_" value="laboral">Laboral</option>
             <option class="formulario_" value="civil">Civil</option>
             <option class="formulario_" value="penal">Penal</option>
             <option class="formulario_" value="familia">Familia</option>
         </select> <br>
-        <p class="datos">Número de juzgado:</p> <input type="number" class="formulario_" placeholder="juzgado número.."> <br>
-        <p class="datos">Fecha de última actualización:</p> <input type="date" class="formulario_" placeholder="actualización.."> <br>
-    <br> 
-        <button class="btn-dark p-lg-2 mx-1 ms-5">Guardar</button> <button class="btn-dark p-lg-2 ms-1" onclick="">Volver a la lista</button>
+        <label class="datos">Número de juzgado:</label> <br> <input type="number" class="formulario_" placeholder="juzgado número.." required> <br>
+        <label class="datos">Fecha de última actualización:</label> <br> <input type="date" class="formulario_" placeholder="actualización.." required> <br>
+        <br> 
+        
+    </form>
+    <button class="btn-dark p-lg-2 ms-1">Actualizar</button>
+    <a href="javascript: history.go(-1)"><button id="volver" class="btn-dark p-lg-2">Volver</button></a> 
+
+
 
         <footer>
-            <p class="font-weight-bold text-uppercase text-white p-0 m-0" >Pagina Web creada por:</p>
-            <p class="font-weight-bold text-white mt-3 mb-4"> Emanuel Marquez, Ariel, Rocío Martin</p>
+            <p class="font-weight-bold text-uppercase text-white p-1 m-1" >Pagina Web creada por:</p>
+            <p class="font-weight-bold text-white m-0"> Emanuel Marquez, Ariel Rodriguez, Rocío Martin</p>
+            <p class="font-weight-bold text-white p-0">Proyecto Final - Codo a Codo 4.0 </p>
         </footer>
+
+
 </body>
 </html>
