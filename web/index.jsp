@@ -63,7 +63,8 @@
                 </thead>
                 <%
                     DAOExp expDao = new DAOExp();
-                    ArrayList<Expediente> datos = expDao.listarTodo();
+                    ArrayList<Expediente> datos = new ArrayList<Expediente>();
+                    datos = expDao.listarTodo();
                     if(datos!=null){
                         for (Expediente ex : datos){                                                
                 %>
