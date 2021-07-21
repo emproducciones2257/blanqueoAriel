@@ -72,8 +72,7 @@
             <input name="fecha" value="fecha" type="date" class="formulario_" placeholder="actualización.." required> <br>
             
             <input class="btn-dark p-lg-2 mx-1 ms-5" type="submit" name="ac" value="Guardar">
-            <a href="Servlet?ac=list" class="btn-dark p-lg-2 mx-1 ms-5">Volver a la lista</a>
-                     
+            <a href="Servlet?ac=list" class="btn-dark p-lg-2 mx-1 ms-5">Volver a la lista</a>                     
 </form>
 </body>
 

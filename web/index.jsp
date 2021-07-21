@@ -63,8 +63,9 @@
                 </thead>
                 <%
                     DAOExp expDao = new DAOExp();
-                    ArrayList<Expediente> datos = expDao.listarTodo();                   
-                    for (Expediente ex : datos) {                                                
+                    ArrayList<Expediente> datos = expDao.listarTodo();
+                    if(datos!=null){
+                        for (Expediente ex : datos) {                                                
                 %>
                 <tbody>
                     <tr>                       
@@ -74,7 +75,7 @@
                         <td><%= ex.getNroJuzgado()%></td>
                         <td><%= ex.getFeUlUpdate()%></td>
                     </tr>
-                  <%}%>
+                  <%}}%>
                 </tbody>
             </table>
             <br><br> 

@@ -16,8 +16,7 @@ public class Servlet extends HttpServlet {
     String viewForm ="view/formulario.jsp";
     String viewIndex = "index.jsp";
     DAOExp exDao = new DAOExp();
-    
-    
+     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -41,7 +40,6 @@ public class Servlet extends HttpServlet {
         
         String accion = request.getParameter("ac");
         String dir="";
-        DAOExp exDao = new DAOExp();
         if(accion.equalsIgnoreCase("formulario")){
             dir=viewForm;
             
